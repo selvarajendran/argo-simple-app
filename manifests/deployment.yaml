@@ -14,6 +14,8 @@ spec:
     spec:
       containers:
       - name: hello
-        image: nginxdemos/hello:plain-text
+        image: hashicorp/http-echo:0.2.3
+        args:
+          - "-text=Hello from version 2"
         ports:
-        - containerPort: 80
+        - containerPort: 5678
